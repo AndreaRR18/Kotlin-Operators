@@ -7,12 +7,3 @@ infix fun <A,B,C> ((A)->(B?)).chain(g: (B) -> C?): (A) -> C? {
         else { g(optionalB) }
     }
 }
-
-fun firstFunOptional(a: Int): String? {
-    return "$a"
-}
-
-fun secondFunOptional(b: String): String? {
-    return null
-}
-val cOptional = ::firstFunOptional chain ::secondFunOptional
